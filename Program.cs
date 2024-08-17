@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 
 namespace StudentRecords
 {
-    // Student class definition
+    // Student class
     public class Student
     {
         public int ID { get; set; }
@@ -25,13 +25,13 @@ namespace StudentRecords
             return $"ID: {ID}, Name: {Name}, Age: {Age}, Grade: {Grade}";
         }
 
-        // Serialize student data to string
+        // student data to string
         public string Serialize()
         {
             return $"{ID},{Name},{Age},{Grade}";
         }
 
-        // Deserialize string to student object
+        // undo string to student object
         public static Student Deserialize(string data)
         {
             var parts = data.Split(',');
